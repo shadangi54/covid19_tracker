@@ -5,9 +5,34 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* overflow: hidden; */
+  overflow: 'hidden';
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.ReactTable {
+  margin-top: 74px;
+}
+
+.ReactTable .rt-tbody {
+  margin-top: 30px;
+}
+
+.ReactTable .rt-thead {
+  background-color: white;
+  position: fixed;
+  top: 1;
+  z-index: 1;
+  width: calc(100% - 17px);
+  height: 31px;
 }
