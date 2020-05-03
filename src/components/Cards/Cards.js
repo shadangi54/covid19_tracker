@@ -20,6 +20,9 @@ const styles = (theme) => ({
     backgroundColor: '#BDBDBD',
     boxShadow: '5px 10px #424242',
   },
+  gridItem: {
+    margin: '15px',
+  },
   bullet: {
     display: 'inline-block',
     margin: '0 2px',
@@ -48,58 +51,49 @@ class Cards extends Component {
       <div classname={classes.root1}>
         {data ? (
           <Grid container justify="center" spacing={2}>
-            <Grid item>
+            <Grid item className={classes.gridItem}>
               <Card className={classes.root}>
                 <CardContent>
                   <Typography variant="h5" component="h2">
                     Total Confirmed Cases
                   </Typography>
-                  <Typography variant="body2" component="p">
+                  <Typography variant="h6" component="p">
                     <br />
                     <CountUp start={0} end={data.confirmed.value} />
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
               </Card>
             </Grid>
-            <Grid item>
+            <Grid item className={classes.gridItem}>
               <Card className={classes.root}>
                 <CardContent>
                   <Typography variant="h5" component="h2">
                     Total Recovered
                   </Typography>
-                  <Typography variant="body2" component="p">
+                  <Typography variant="h6" component="p">
                     <br />
                     <CountUp start={0} end={data.recovered.value} />
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
               </Card>
             </Grid>
-            <Grid item>
+            <Grid item className={classes.gridItem}>
               <Card className={classes.root}>
                 <CardContent>
                   <Typography variant="h5" component="h2">
                     Total Deaths
                   </Typography>
-                  <Typography variant="body2" component="p">
+                  <Typography variant="h6" component="p">
                     <br />
                     <CountUp start={0} end={data.deaths.value} />
                   </Typography>
                 </CardContent>
-                <CardActions>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
               </Card>
             </Grid>
           </Grid>
         ) : (
           <div>
-            <h1>DATA AARAHA HAI.........</h1>
+            <h1></h1>
           </div>
         )}
       </div>

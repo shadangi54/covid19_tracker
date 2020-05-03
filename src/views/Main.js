@@ -5,6 +5,7 @@ import { overallDataService, commonService } from '../services/services';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Button from '@material-ui/core/Button';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
 
 class Main extends Component {
   constructor(props) {
@@ -40,9 +41,10 @@ class Main extends Component {
       <div>
         {this.state.overallData ? (
           <div>
-            {' '}
             <Cards data={this.state.overallData} />
+
             <CountryPicker data={this.state.countries} />
+
             <Link
               style={{ textDecoration: 'none', marginLeft: '44%' }}
               to={{
@@ -62,8 +64,8 @@ class Main extends Component {
             </Link>
           </div>
         ) : (
-          <div style={{ width: '100%', marginLeft: '37%', marginTop: '10%' }}>
-            <CircularProgress color="primary" size={250} />
+          <div style={{ width: '100%', marginLeft: '37%', marginTop: '60%' }}>
+            <CircularProgress color="primary" size={100} />
           </div>
         )}
       </div>
